@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse</title>
+    <script>
+        function sendEmail() {
+            window.location = "mailto:rohith16725@gmail.com";
+        }
+    </script>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text for readability */
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #1e1e1e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #bb86fc; /* Accent color */
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar a {
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #03dac6; /* Teal accent */
+        }
+
+        /* Header Section */
+        .header {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #bb86fc;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin: 2rem auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 0.8rem 1rem;
+            width: 40%;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #292929;
+            color: #e0e0e0;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #03dac6;
+        }
+
+        .search-bar button {
+            padding: 0.8rem 1.5rem;
+            margin-left: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #bb86fc;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .search-bar button:hover {
+            background: #9b70db;
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 3rem 1rem;
+            background: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            color: #bb86fc;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem;
+            background: #292929;
+            text-align: center;
+            color: #e0e0e0;
+        }
+
+        .footer .contact {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #03dac6;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            color: #b0b0b0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 70%;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">MovieVerse</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header" id="home">
+        <h1>MovieVerse</h1>
+        <p>Your ultimate destination for movie reviews and ratings. Join the community of cinema lovers!</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for a Movie">
+        <button>Search</button>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section" id="reviews">
+        <h2>About MovieVerse</h2>
+        <p>MovieVerse is your gateway to discovering movie reviews, ratings, and discussions. Dive deep into the world of cinema with our vibrant community of movie enthusiasts!</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="contact">
+        <div class="contact">Contact Us</div>
+        <div class="footer-links">
+            <a href="#" onclick="sendEmail();">Email</a>
+            <a href="https://www.instagram.com">Instagram</a>
+            <a href="https://x.com">Twitter</a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 MovieVerse. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
